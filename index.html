@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zenith Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              quran: ['"Noto Naskh Arabic"', 'serif'],
+            },
+            colors: {
+              primary: {
+                '50': 'rgb(var(--color-primary-50) / <alpha-value>)',
+                '100': 'rgb(var(--color-primary-100) / <alpha-value>)',
+                '200': 'rgb(var(--color-primary-200) / <alpha-value>)',
+                '300': 'rgb(var(--color-primary-300) / <alpha-value>)',
+                '400': 'rgb(var(--color-primary-400) / <alpha-value>)',
+                '500': 'rgb(var(--color-primary-500) / <alpha-value>)',
+                '600': 'rgb(var(--color-primary-600) / <alpha-value>)',
+                '700': 'rgb(var(--color-primary-700) / <alpha-value>)',
+                '800': 'rgb(var(--color-primary-800) / <alpha-value>)',
+                '900': 'rgb(var(--color-primary-900) / <alpha-value>)',
+                '950': 'rgb(var(--color-primary-950) / <alpha-value>)',
+              },
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Base & Blue Theme */
+      :root, .theme-color-blue {
+        --color-primary-50: 239 246 255;
+        --color-primary-100: 219 234 254;
+        --color-primary-200: 191 219 254;
+        --color-primary-300: 147 197 253;
+        --color-primary-400: 96 165 250;
+        --color-primary-500: 59 130 246;
+        --color-primary-600: 37 99 235;
+        --color-primary-700: 29 78 216;
+        --color-primary-800: 30 64 175;
+        --color-primary-900: 30 58 138;
+        --color-primary-950: 23 37 84;
+      }
+      .theme-color-green {
+        --color-primary-50: 240 253 244; --color-primary-100: 220 252 231; --color-primary-200: 187 247 208; --color-primary-300: 134 239 172; --color-primary-400: 74 222 128; --color-primary-500: 34 197 94; --color-primary-600: 22 163 74; --color-primary-700: 21 128 61; --color-primary-800: 22 101 52; --color-primary-900: 20 83 45; --color-primary-950: 6 78 59;
+      }
+      .theme-color-rose {
+        --color-primary-50: 255 241 242; --color-primary-100: 255 228 230; --color-primary-200: 254 205 211; --color-primary-300: 253 164 175; --color-primary-400: 251 113 133; --color-primary-500: 244 63 94; --color-primary-600: 225 29 72; --color-primary-700: 190 18 60; --color-primary-800: 159 18 57; --color-primary-900: 136 19 55; --color-primary-950: 76 5 25;
+      }
+      .theme-color-orange {
+        --color-primary-50: 255 247 237; --color-primary-100: 255 237 213; --color-primary-200: 254 215 170; --color-primary-300: 253 186 116; --color-primary-400: 251 146 60; --color-primary-500: 249 115 22; --color-primary-600: 234 88 12; --color-primary-700: 194 65 12; --color-primary-800: 154 52 18; --color-primary-900: 124 45 18; --color-primary-950: 69 10 7;
+      }
+      .theme-color-violet {
+          --color-primary-50: 245 243 255; --color-primary-100: 238 232 255; --color-primary-200: 221 214 254; --color-primary-300: 196 181 253; --color-primary-400: 167 139 250; --color-primary-500: 139 92 246; --color-primary-600: 124 58 237; --color-primary-700: 109 40 217; --color-primary-800: 91 33 182; --color-primary-900: 76 29 149; --color-primary-950: 46 16 101;
+      }
+      .theme-color-slate {
+          --color-primary-50: 248 250 252; --color-primary-100: 241 245 249; --color-primary-200: 226 232 240; --color-primary-300: 203 213 225; --color-primary-400: 148 163 184; --color-primary-500: 100 116 139; --color-primary-600: 71 85 105; --color-primary-700: 51 65 85; --color-primary-800: 30 41 59; --color-primary-900: 15 23 42; --color-primary-950: 2 6 23;
+      }
+      .theme-color-cyan {
+          --color-primary-50: 236 254 255; --color-primary-100: 207 250 254; --color-primary-200: 165 243 252; --color-primary-300: 103 232 249; --color-primary-400: 34 211 238; --color-primary-500: 6 182 212; --color-primary-600: 8 145 178; --color-primary-700: 14 116 144; --color-primary-800: 21 94 117; --color-primary-900: 20 78 95; --color-primary-950: 4 51 64;
+      }
+      .theme-color-pink {
+          --color-primary-50: 253 242 248; --color-primary-100: 252 231 243; --color-primary-200: 251 207 232; --color-primary-300: 249 168 212; --color-primary-400: 244 114 182; --color-primary-500: 236 72 153; --color-primary-600: 219 39 119; --color-primary-700: 190 24 93; --color-primary-800: 157 23 77; --color-primary-900: 131 24 67; --color-primary-950: 74 9 38;
+      }
+      .theme-color-emerald {
+          --color-primary-50: 236 253 245; --color-primary-100: 209 250 229; --color-primary-200: 167 243 208; --color-primary-300: 110 231 183; --color-primary-400: 52 211 153; --color-primary-500: 16 185 129; --color-primary-600: 5 150 105; --color-primary-700: 4 120 87; --color-primary-800: 6 95 70; --color-primary-900: 6 78 59; --color-primary-950: 2 44 34;
+      }
+      .theme-color-sky {
+          --color-primary-50: 240 249 255; --color-primary-100: 224 242 254; --color-primary-200: 186 230 253; --color-primary-300: 125 211 252; --color-primary-400: 56 189 248; --color-primary-500: 14 165 233; --color-primary-600: 2 132 199; --color-primary-700: 3 105 161; --color-primary-800: 7 89 133; --color-primary-900: 12 74 110; --color-primary-950: 8 47 73;
+      }
+      .theme-color-amber {
+          --color-primary-50: 255 251 235; --color-primary-100: 254 243 226; --color-primary-200: 253 230 138; --color-primary-300: 252 211 77; --color-primary-400: 251 191 36; --color-primary-500: 245 158 11; --color-primary-600: 217 119 6; --color-primary-700: 180 83 9; --color-primary-800: 146 64 14; --color-primary-900: 120 53 15; --color-primary-950: 67 20 7;
+      }
+      .theme-color-lime {
+          --color-primary-50: 247 254 231; --color-primary-100: 236 252 203; --color-primary-200: 217 249 157; --color-primary-300: 190 245 112; --color-primary-400: 163 230 53; --color-primary-500: 132 204 22; --color-primary-600: 101 163 13; --color-primary-700: 77 124 15; --color-primary-800: 63 98 18; --color-primary-900: 54 83 20; --color-primary-950: 26 46 5;
+      }
+      
+      .theme-khata {
+          background-color: #f9f7f0;
+          color: #5d5d5d;
+          font-family: monospace;
+      }
+      .dark.theme-khata {
+          background-color: #2a2a2e;
+          color: #d1d1d1;
+      }
+
+      .theme-gradient {
+          background: linear-gradient(135deg, white 0%, rgba(var(--color-primary-100), 0.6) 100%);
+          transition: background 0.5s ease;
+      }
+      .dark.theme-gradient {
+          background: linear-gradient(135deg, #111827 0%, rgba(var(--color-primary-900), 0.4) 100%);
+      }
+
+      /* Scrollbar */
+      ::-webkit-scrollbar { width: 8px; height: 8px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: rgba(var(--color-primary-500), 0.5); border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: rgba(var(--color-primary-500), 0.7); }
+
+      /* Custom Checkbox for Planner */
+      .custom-checkbox {
+          width: 1.25rem;
+          height: 1.25rem;
+          appearance: none;
+          background-color: #fff;
+          border: 2px solid #cbd5e1;
+          border-radius: 0.375rem;
+          cursor: pointer;
+          position: relative;
+          transition: all 0.2s ease-in-out;
+      }
+      .dark .custom-checkbox { background-color: rgb(var(--color-primary-900) / 0.2); border-color: rgb(var(--color-primary-700)); }
+      .custom-checkbox:checked { background-color: rgb(var(--color-primary-500)); border-color: rgb(var(--color-primary-600)); }
+      .custom-checkbox:checked::after {
+          content: '✓';
+          color: white;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 0.9rem;
+          font-weight: bold;
+      }
+
+      /* Planner Task Animation */
+      @keyframes task-enter-anim {
+          from { opacity: 0; transform: translateY(10px) scale(0.98); }
+          to { opacity: 1; transform: translateY(0) scale(1); }
+      }
+      .task-enter {
+          animation: task-enter-anim 0.3s ease-out backwards;
+          animation-delay: calc(var(--task-index) * 50ms);
+      }
+      .print-container { display: none; }
+      @media print {
+        body.printing > *:not(.print-container) { display: none; }
+        .print-container { display: block; }
+      }
+      
+      /* Header clock animation */
+      .blinking-colon { animation: blink 1.5s infinite; }
+      @keyframes blink { 50% { opacity: 0; } }
+      .second-flipper { 
+        animation: flip-in 0.5s ease, second-glow-anim 0.7s ease-out;
+      }
+      @keyframes flip-in {
+          from { transform: rotateX(90deg); opacity: 0; }
+          to { transform: rotateX(0deg); opacity: 1; }
+      }
+      @keyframes second-glow-anim {
+        from {
+          box-shadow: 0 0 12px 3px rgba(var(--color-primary-500), 0.35);
+        }
+        to {
+          box-shadow: 0 0 0 0 rgba(var(--color-primary-500), 0);
+        }
+      }
+
+      /* Notes View Animations */
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      .fade-in {
+        animation: fadeIn 0.3s ease-in-out forwards;
+      }
+
+      @keyframes slideInUp {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .note-item-enter {
+        animation: slideInUp 0.4s ease-out forwards;
+        animation-delay: calc(var(--note-index) * 50ms);
+        opacity: 0; /* Start hidden */
+      }
+      
+      /* Dashboard Widget Animation */
+      @keyframes widget-enter {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .dashboard-widget {
+          animation: widget-enter 0.5s ease-out forwards;
+          animation-delay: calc(var(--widget-index) * 80ms);
+          opacity: 0; /* Start hidden */
+      }
+
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.12.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
